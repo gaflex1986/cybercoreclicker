@@ -36,7 +36,7 @@
       <nav class="nav-links">
         <a href="#about" class="nav-link"><span class="nav-code">01//</span> О ИГРЕ</a>
         <a href="#demo" class="nav-link"><span class="nav-code">02//</span> ТЕСТ-РЕАКТОР</a>
-        <a href="#terminal" class="nav-link"><span class="nav-code">03//</span> БАЗА КАРТ</a>
+        <a href="#terminal" class="nav-link"><span class="nav-code">03//</span> 🔒 РЕЕСТР КАРТ</a>
         <a href="#generators" class="nav-link"><span class="nav-code">04//</span> ТЕХНОЛОГИИ</a>
         <a href="#download" class="nav-link"><span class="nav-code">05//</span> СКАЧАТЬ</a>
       </nav>
@@ -340,18 +340,71 @@
     <!-- INTERACTIVE HACKER TERMINAL: CARDS DATABASE -->
     <section class="terminal-section" id="terminal">
       <div class="section-header">
-        <div class="section-tag">// СЕКРЕТНЫЙ РЕЕСТР ПЕРЕХВАТА ДАННЫХ</div>
-        <h2 class="section-title">БАЗА КАРТ & ЧИТ-КОДЫ ДЛЯ ТЕРМИНАЛА</h2>
-        <p class="section-subtitle">
-          Внутри игры перейдите во вкладку <strong>«💳 Донат»</strong>. Вы можете добыть эти реквизиты в игре
-          через зеленые квантовые аномалии или скопировать прямо отсюда и ввести в терминал вручную!
+        <div class="section-tag" id="terminalSectionTag">// СОВЕРШЕННО СЕКРЕТНО • ДОСТУП ОГРАНИЧЕН</div>
+        <h2 class="section-title" id="terminalSectionTitle">🔒 ЗАСЕКРЕЧЕННЫЙ РЕЕСТР КАРТ</h2>
+        <p class="section-subtitle" id="terminalSectionSubtitle">
+          Список админских карт и чит-кодов зашифрован. Для дешифровки и доступа к базе реквизитов требуется ввод мастер-ключа администратора.
         </p>
       </div>
 
-      <div class="terminal-container">
+      <!-- ADMIN SECURITY GATE (LOCKED STATE) -->
+      <div class="admin-gate-panel" id="adminGatePanel">
+        <div class="admin-gate-card">
+          <div class="gate-status-header">
+            <span class="gate-lock-icon">🔒</span>
+            <div class="gate-title-block">
+              <div class="gate-classified-label">КЛАССИФИКАЦИЯ: УРОВЕНЬ 5 // TOP SECRET</div>
+              <h3 class="gate-title">ШЛЮЗ АВТОРИЗАЦИИ АДМИНИСТРАТОРА</h3>
+            </div>
+            <span class="gate-badge-encrypted">ЗАШИФРОВАНО AES-256</span>
+          </div>
+
+          <p class="gate-description">
+            Прямой доступ к базе данных корпоративных карт заблокирован протоколом защиты ядра станции.
+            Введите действительный ключ администратора в формате <code>XXXX_XXXX_XXXX_XXXX</code> для дешифровки реестра и снятия блокировки.
+          </p>
+
+          <form class="admin-key-form" id="adminKeyForm" onsubmit="return false;">
+            <div class="admin-input-wrapper" id="adminInputWrapper">
+              <span class="admin-input-prefix">KEY://</span>
+              <input
+                type="text"
+                id="adminKeyInput"
+                class="admin-key-input"
+                placeholder="XXXX_XXXX_XXXX_XXXX"
+                maxlength="19"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+            <button type="button" class="cyber-btn cyber-btn-cyan" id="btnUnlockCards">
+              <span class="btn-icon">🔓</span> ПОДТВЕРДИТЬ КЛЮЧ
+            </button>
+          </form>
+
+          <div class="admin-key-status" id="adminKeyStatus" aria-live="polite"></div>
+
+          <div class="gate-footer-hint">
+            <span class="hint-icon">ℹ️</span>
+            <span>Для получения авторизации свяжитесь с системным администратором станции или используйте сгенерированный мастер-ключ.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNLOCKED CARDS DATABASE (HIDDEN BY DEFAULT) -->
+      <div class="terminal-container" id="terminalContainer" style="display: none;">
         <!-- Card Selector Carousel / List -->
-        <div class="terminal-card-selector" id="cardSelectorList">
-          <!-- Dynamically populated or static cards -->
+        <div class="terminal-card-selector-wrapper">
+          <div class="unlocked-bar-header">
+            <div class="unlocked-status-box">
+              <span class="status-indicator-green">●</span>
+              <span class="unlocked-title">РЕЕСТР РАСШИФРОВАН [7 КАРТ]</span>
+            </div>
+            <button type="button" class="cyber-btn-mini" id="btnLockCards" title="Заблокировать базу">🔒 ЗАКРЫТЬ ДОСТУП</button>
+          </div>
+          <div class="terminal-card-selector" id="cardSelectorList">
+            <!-- Dynamically populated upon unlock -->
+          </div>
         </div>
 
         <!-- Interactive Holographic Card Display -->
@@ -359,30 +412,30 @@
           <div class="cyber-credit-card" id="activeHoloCard">
             <div class="card-chip"></div>
             <div class="card-contactless">)))</div>
-            <div class="card-bank" id="holoCardBank">CYBERCORP CLASSIC</div>
+            <div class="card-bank" id="holoCardBank">•••••••• ••••••••</div>
             
             <div class="card-number-block">
               <span class="card-label">CARD NUMBER</span>
-              <div class="card-number" id="holoCardNumber">4276 3811 9024 1337</div>
+              <div class="card-number" id="holoCardNumber">•••• •••• •••• ••••</div>
             </div>
 
             <div class="card-details-row">
               <div class="card-holder-box">
                 <span class="card-label">CARDHOLDER</span>
-                <div class="card-holder" id="holoCardHolder">ALEX_JUNIOR</div>
+                <div class="card-holder" id="holoCardHolder">RESTRICTED_ACCESS</div>
               </div>
               <div class="card-exp-box">
                 <span class="card-label">EXPIRES</span>
-                <div class="card-exp" id="holoCardExp">09/28</div>
+                <div class="card-exp" id="holoCardExp">••/••</div>
               </div>
               <div class="card-cvv-box">
                 <span class="card-label">CVV</span>
-                <div class="card-cvv" id="holoCardCvv">404</div>
+                <div class="card-cvv" id="holoCardCvv">•••</div>
               </div>
             </div>
 
             <div class="card-balance-badge" id="holoCardBalance">
-              БАЛАНС: $150.00
+              БАЛАНС: $0.00
             </div>
             <div class="card-holo-glare"></div>
           </div>
