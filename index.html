@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER CORE: QUANTUM OVERDRIVE — Скачать футуристический кликер</title>
+  <meta name="description" content="Официальный сайт загрузки Cyber Core: Quantum Overdrive. Автономная кликер-стратегия с процедурным звуком, овердрайвом, престижем сингулярности и терминалом взлома корпоративных карт.">
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Google Fonts: Orbitron, Rajdhani, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="scanlines-active">
+  <!-- CRT Scanlines Overlay -->
+  <div class="crt-overlay" id="crtOverlay" aria-hidden="true"></div>
+  <div class="cyber-noise" aria-hidden="true"></div>
+
+  <!-- Cyber Grid Background -->
+  <div class="grid-background" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="cyber-header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <img src="icon.png" alt="CyberCore Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">CYBER CORE</span>
+          <span class="brand-sub">QUANTUM OVERDRIVE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link"><span class="nav-code">01//</span> О ИГРЕ</a>
+        <a href="#demo" class="nav-link"><span class="nav-code">02//</span> ТЕСТ-РЕАКТОР</a>
+        <a href="#terminal" class="nav-link"><span class="nav-code">03//</span> БАЗА КАРТ</a>
+        <a href="#generators" class="nav-link"><span class="nav-code">04//</span> ТЕХНОЛОГИИ</a>
+        <a href="#download" class="nav-link"><span class="nav-code">05//</span> СКАЧАТЬ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="sfxToggle" class="cyber-btn-icon" title="Переключить процедурный SFX звук" aria-label="Звук">
+          <span class="sfx-indicator on"></span>
+          <span class="icon-label">SFX: ВКЛ</span>
+        </button>
+        <button id="crtToggle" class="cyber-btn-icon" title="Переключить CRT-фильтр" aria-label="CRT">
+          <span class="icon-label">CRT</span>
+        </button>
+        <a href="#download" class="cyber-btn cyber-btn-sm cyber-btn-cyan">
+          <span class="btn-glitch"></span>
+          <span>⚡ СКАЧАТЬ</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-blob hero-glow-1"></div>
+      <div class="hero-glow-blob hero-glow-2"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span class="badge-text">FINAL RELEASE v1.0.4 // STANDALONE PORTABLE PC GAME</span>
+        </div>
+
+        <h1 class="hero-title">
+          КИБЕР-ЯДРО
+          <span class="hero-title-accent">КВАНТОВЫЙ РЕАКТОР</span>
+        </h1>
+
+        <p class="hero-desc">
+          Глубокая научно-фантастическая кликер-стратегия с неоновым киберпанк HUD,
+          <strong class="highlight">100% процедурным звуком</strong>, комбо-овердрайвом, коллапсом сингулярности в тёмную материю
+          и <strong class="highlight-alt">симулятором перехвата реквизитов корпоративных карт</strong> через квантовые аномалии.
+        </p>
+
+        <!-- Key Meta Specs -->
+        <div class="meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">ФОРМАТ</span>
+            <span class="meta-value">Single Portable EXE</span>
+          </div>
+          <div class="meta-divider">/</div>
+          <div class="meta-item">
+            <span class="meta-label">ВЕС ФАЙЛА</span>
+            <span class="meta-value">14.15 MB (Всё включено)</span>
+          </div>
+          <div class="meta-divider">/</div>
+          <div class="meta-item">
+            <span class="meta-label">ДОНАТ</span>
+            <span class="meta-value">0₽ (Взлом дампов в игре)</span>
+          </div>
+          <div class="meta-divider">/</div>
+          <div class="meta-item">
+            <span class="meta-label">ПЛАТФОРМА</span>
+            <span class="meta-value">Windows 10 / 11 (64-bit)</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="CyberCoreClicker.exe" download="CyberCoreClicker.exe" class="cyber-btn cyber-btn-lg cyber-btn-neon" id="heroDownloadBtn">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-text-block">
+              <span class="btn-main-text">СКАЧАТЬ ДЛЯ WINDOWS</span>
+              <span class="btn-sub-text">CyberCoreClicker.exe • Прямая ссылка (14.8 MB)</span>
+            </span>
+            <span class="corner-cut"></span>
+          </a>
+
+          <a href="#demo" class="cyber-btn cyber-btn-lg cyber-btn-outline">
+            <span class="btn-icon">🕹️</span>
+            <span class="btn-main-text">ТЕСТОВЫЙ ПУСК ОНЛАЙН</span>
+            <span class="corner-cut"></span>
+          </a>
+        </div>
+
+        <div class="hero-specs-pill">
+          <span class="pill-check">✔</span> Без установки
+          <span class="pill-check">✔</span> Без Python и зависимостей
+          <span class="pill-check">✔</span> Полный оффлайн-прогресс
+          <span class="pill-check">✔</span> 60+ FPS на любом железе
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE REACTOR DEMO -->
+    <section class="demo-section" id="demo">
+      <div class="section-header">
+        <div class="section-tag">// ТЕСТОВЫЙ ТЕЛЕМЕТРИЧЕСКИЙ СТЕНД</div>
+        <h2 class="section-title">ИНТЕРАКТИВНОЕ ЯДРО В БРАУЗЕРЕ</h2>
+        <p class="section-subtitle">
+          Почувствуйте динамику клика прямо сейчас: раскручивайте квантовые кольца,
+          набирайте 5.0x Овердрайв и ловите парящие аномалии данных со звуком из реального движка!
+        </p>
+      </div>
+
+      <div class="reactor-deck">
+        <!-- Telemetry Panel Left -->
+        <div class="deck-telemetry-col">
+          <div class="hud-panel stat-card">
+            <div class="panel-corner top-l"></div>
+            <div class="panel-corner top-r"></div>
+            <div class="panel-corner btm-l"></div>
+            <div class="panel-corner btm-r"></div>
+
+            <div class="hud-label">⚡ ТЕКУЩАЯ ЭНЕРГИЯ</div>
+            <div class="stat-number glow-cyan" id="liveEnergyDisplay">0.00 ⚡</div>
+            <div class="stat-sub">Базовый сбор: <span id="clickPowerDisplay">+1.0 ⚡</span> / клик</div>
+          </div>
+
+          <div class="hud-panel stat-card">
+            <div class="hud-label">🔥 МНОЖИТЕЛЬ OVERDRIVE</div>
+            <div class="stat-number glow-magenta" id="liveComboDisplay">1.0x</div>
+            <div class="combo-meter-frame">
+              <div class="combo-meter-bar" id="comboMeterBar" style="width: 0%;"></div>
+            </div>
+            <div class="stat-sub status-indicator-text" id="overdriveStatusText">СТАТУС: НОМИНАЛ</div>
+          </div>
+
+          <div class="hud-panel stat-card">
+            <div class="hud-label">✦ АРТЕФАКТЫ И АНОМАЛИИ</div>
+            <div class="anomaly-counter-row">
+              <span class="anomaly-icon-dot"></span>
+              <span id="anomaliesCaughtCount">Поймано аномалий: 0</span>
+            </div>
+            <div class="stat-tip">Кликайте по летящим зелёным сферам, чтобы перехватывать данные!</div>
+          </div>
+        </div>
+
+        <!-- Center Canvas Reactor Core -->
+        <div class="deck-canvas-col">
+          <div class="canvas-frame">
+            <div class="canvas-hud-header">
+              <span class="hud-badge-online">● CORE ONLINE</span>
+              <span class="hud-telemetry-code">RESONANCE: <span id="coreHertz">440.0 Hz</span></span>
+              <span class="hud-fps-counter">60 FPS</span>
+            </div>
+
+            <canvas id="coreCanvas" width="560" height="420"></canvas>
+
+            <div class="canvas-instructions">
+              <span class="key-hint">🖱️ ЛКМ</span> Кликайте по центру ядра или жмите <kbd>ПРОБЕЛ</kbd> на клавиатуре!
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Panel Right (Upgrades Mini-Sim) -->
+        <div class="deck-upgrades-col">
+          <div class="hud-panel deck-ctrl-panel">
+            <div class="panel-corner top-l"></div>
+            <div class="panel-corner top-r"></div>
+            <div class="panel-corner btm-l"></div>
+            <div class="panel-corner btm-r"></div>
+
+            <div class="hud-title-row">
+              <span class="hud-heading">БОРТОВОЙ УСКОРИТЕЛЬ</span>
+              <span class="hud-badge-beta">DEMO</span>
+            </div>
+
+            <div class="quick-upgrade-list">
+              <button class="demo-upg-btn" id="btnBuyNano">
+                <div class="upg-info">
+                  <span class="upg-name">🔬 Нано-Конвертер</span>
+                  <span class="upg-desc">+4.0 ⚡/сек пассивно</span>
+                </div>
+                <div class="upg-cost" id="costNano">100 ⚡</div>
+              </button>
+
+              <button class="demo-upg-btn" id="btnBuyGlove">
+                <div class="upg-info">
+                  <span class="upg-name">🧤 Кибер-Перчатка</span>
+                  <span class="upg-desc">+100% к силе клика</span>
+                </div>
+                <div class="upg-cost" id="costGlove">150 ⚡</div>
+              </button>
+
+              <button class="demo-upg-btn" id="btnBuyPlasma">
+                <div class="upg-info">
+                  <span class="upg-name">⚛️ Плазменный Инжектор</span>
+                  <span class="upg-desc">+32.0 ⚡/сек пассивно</span>
+                </div>
+                <div class="upg-cost" id="costPlasma">1,100 ⚡</div>
+              </button>
+            </div>
+
+            <div class="demo-note">
+              Полная игра содержит <strong>8 уровней генераторов</strong>, ветку тёмной материи и бесконечную прогрессию.
+            </div>
+
+            <a href="#download" class="cyber-btn cyber-btn-block cyber-btn-cyan">
+              СКАЧАТЬ ПОЛНУЮ ВЕРСИЮ ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE FEATURES GRID (NO AI SLOP) -->
+    <section class="features-section" id="about">
+      <div class="section-header">
+        <div class="section-tag">// АРХИТЕКТУРА И ГЕЙМПЛЕЙ</div>
+        <h2 class="section-title">ПОЛНОЦЕННАЯ ИГРА, А НЕ СКРИПТ</h2>
+        <p class="section-subtitle">
+          Cyber Core: Quantum Overdrive создана с вниманием к деталям: хакерская эстетика,
+          честная математика инкрементала и оригинальные игровые механики.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Cards Intercept -->
+        <div class="feature-card special-border">
+          <div class="feature-icon-wrapper cyan">
+            <span class="feature-icon">💳</span>
+          </div>
+          <div class="feature-tag">ЭКСКЛЮЗИВНАЯ МЕХАНИКА</div>
+          <h3 class="feature-title">Взлом Реквизитов Карт</h3>
+          <p class="feature-desc">
+            В игре есть «Донат-Шоп», но в нём <strong>нет реальных денег</strong>! Ловите редкие квантовые аномалии,
+            перехватывайте зашифрованные дампы карт нео-олигархов и вводите 16-значные номера, сроки и CVV в терминале вручную,
+            чтобы открывать балансы до <strong>$1,000,000</strong>.
+          </p>
+          <div class="feature-footer-link">
+            <a href="#terminal">Смотреть базу карт ➔</a>
+          </div>
+        </div>
+
+        <!-- Feature 2: Procedural Audio -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper magenta">
+            <span class="feature-icon">🔊</span>
+          </div>
+          <div class="feature-tag">ЧИСТЫЙ СИНТЕЗ</div>
+          <h3 class="feature-title">Процедурный Звуковой Движок</h3>
+          <p class="feature-desc">
+            Никаких тяжёлых MP3 и чужих сэмплов. Все звуки: клики, криты, частотные свипы аномалий, фанфары покупок и овердрайв
+            генерируются на лету через гармоники синусоид и аккордов частот. Идеальный олдскульный сай-фай звук.
+          </p>
+        </div>
+
+        <!-- Feature 3: Hyper Overdrive -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper gold">
+            <span class="feature-icon">⚡</span>
+          </div>
+          <div class="feature-tag">ДИНАМИКА КЛИКОВ</div>
+          <h3 class="feature-title">Комбо-Шкала Овердрайва</h3>
+          <p class="feature-desc">
+            Быстрые клики разгоняют реактор. Комбо-множитель поднимается от 1.0x до 5.0x Hyperdrive.
+            При перегреве ядро вспыхивает золотым плазменным сиянием, а частицы разлетаются ударными волнами по экрану.
+          </p>
+        </div>
+
+        <!-- Feature 4: Prestige & Singularity -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper green">
+            <span class="feature-icon">✦</span>
+          </div>
+          <div class="feature-tag">ГЛУБОКАЯ СТРАТЕГИЯ</div>
+          <h3 class="feature-title">Престиж: Сингулярность</h3>
+          <p class="feature-desc">
+            Достигнув пика мощности, сколлапсируйте квантовое ядро в Чёрную Дыру и получите Тёмную Материю (✦).
+            Каждая единица даёт постоянный +10% мультипликатор и открывает реликвии Архитектора.
+          </p>
+        </div>
+
+        <!-- Feature 5: Offline Progress -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper cyan">
+            <span class="feature-icon">⏳</span>
+          </div>
+          <div class="feature-tag">БЕЗ ТРАТЫ ВРЕМЕНИ</div>
+          <h3 class="feature-title">Полный Оффлайн-Прогресс</h3>
+          <p class="feature-desc">
+            Закрыли игру? Генераторы продолжают синтезировать энергию в фоне. При следующем запуске защитная система
+            встретит вас отчётом обо всей энергии, накопленной станцией за время вашего отсутствия.
+          </p>
+        </div>
+
+        <!-- Feature 6: Portable & Safe -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper purple">
+            <span class="feature-icon">🛡️</span>
+          </div>
+          <div class="feature-tag">ЧИСТЫЙ КОД</div>
+          <h3 class="feature-title">Автономный EXE Без Мусора</h3>
+          <p class="feature-desc">
+            Один скомпилированный бинарник. Без рекламы, без сбора данных, без фоновых сервисов, без интернета.
+            Сохранения пишутся в открытый `cyber_core_save.json` рядом с игрой — вы полностью контролируете свой прогресс.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HACKER TERMINAL: CARDS DATABASE -->
+    <section class="terminal-section" id="terminal">
+      <div class="section-header">
+        <div class="section-tag">// СЕКРЕТНЫЙ РЕЕСТР ПЕРЕХВАТА ДАННЫХ</div>
+        <h2 class="section-title">БАЗА КАРТ & ЧИТ-КОДЫ ДЛЯ ТЕРМИНАЛА</h2>
+        <p class="section-subtitle">
+          Внутри игры перейдите во вкладку <strong>«💳 Донат»</strong>. Вы можете добыть эти реквизиты в игре
+          через зеленые квантовые аномалии или скопировать прямо отсюда и ввести в терминал вручную!
+        </p>
+      </div>
+
+      <div class="terminal-container">
+        <!-- Card Selector Carousel / List -->
+        <div class="terminal-card-selector" id="cardSelectorList">
+          <!-- Dynamically populated or static cards -->
+        </div>
+
+        <!-- Interactive Holographic Card Display -->
+        <div class="hologram-stage">
+          <div class="cyber-credit-card" id="activeHoloCard">
+            <div class="card-chip"></div>
+            <div class="card-contactless">)))</div>
+            <div class="card-bank" id="holoCardBank">CYBERCORP CLASSIC</div>
+            
+            <div class="card-number-block">
+              <span class="card-label">CARD NUMBER</span>
+              <div class="card-number" id="holoCardNumber">4276 3811 9024 1337</div>
+            </div>
+
+            <div class="card-details-row">
+              <div class="card-holder-box">
+                <span class="card-label">CARDHOLDER</span>
+                <div class="card-holder" id="holoCardHolder">ALEX_JUNIOR</div>
+              </div>
+              <div class="card-exp-box">
+                <span class="card-label">EXPIRES</span>
+                <div class="card-exp" id="holoCardExp">09/28</div>
+              </div>
+              <div class="card-cvv-box">
+                <span class="card-label">CVV</span>
+                <div class="card-cvv" id="holoCardCvv">404</div>
+              </div>
+            </div>
+
+            <div class="card-balance-badge" id="holoCardBalance">
+              БАЛАНС: $150.00
+            </div>
+            <div class="card-holo-glare"></div>
+          </div>
+
+          <div class="card-action-bar">
+            <button class="cyber-btn cyber-btn-cyan" id="btnCopyCardDetails">
+              📋 СКОПИРОВАТЬ РЕКВИЗИТЫ ДЛЯ ИГРЫ
+            </button>
+            <span class="copy-success-tip" id="copySuccessTip">Скопировано в буфер обмена!</span>
+          </div>
+
+          <div class="card-quick-cheatsheet">
+            <div class="cheatsheet-title">💡 ИНСТРУКЦИЯ ПО АКТИВАЦИИ В ИГРЕ:</div>
+            <ol class="cheatsheet-steps">
+              <li>Откройте <strong>`CyberCoreClicker.exe`</strong> и перейдите во вкладку <strong>«💳 Донат»</strong>.</li>
+              <li>Кликните по полям ввода и введите 16 цифр карты, срок (MM/YY) и 3 цифры CVV.</li>
+              <li>Нажмите <strong>[💳 ПРИВЯЗАТЬ КАРТУ]</strong> или клавишу <kbd>Enter</kbd>.</li>
+              <li>Баланс карты активируется! Покупайте VIP-статусы, турбо-кликеры и наборы энергии!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 GENERATION TIERS -->
+    <section class="generators-section" id="generators">
+      <div class="section-header">
+        <div class="section-tag">// ТЕХНОЛОГИЧЕСКИЙ АРСЕНАЛ</div>
+        <h2 class="section-title">8 ЭТАПОВ КВАНТОВОЙ ЭВОЛЮЦИИ</h2>
+        <p class="section-subtitle">
+          Каждый генератор увеличивает выработку энергии в секунду (EPS) и открывает новые ветки апгрейдов.
+        </p>
+      </div>
+
+      <div class="generators-grid">
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">NANO</span>
+            <span class="gen-eps">+4.0 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Нано-Конвертер</h4>
+          <p class="gen-desc">Преобразует молекулярные колебания кристалла в стабильный квантовый поток.</p>
+          <div class="gen-cost">Базовая цена: 100 ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">PLZMA</span>
+            <span class="gen-eps">+32.0 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Плазменный Инжектор</h4>
+          <p class="gen-desc">Генерирует высокотемпературную плазму в сверхпроводящей магнитной ловушке.</p>
+          <div class="gen-cost">Базовая цена: 1,100 ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">FUSION</span>
+            <span class="gen-eps">+260.0 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Термоядерный Блок</h4>
+          <p class="gen-desc">Управляемый синтез ядер дейтерия обеспечивает колоссальный всплеск мощности.</p>
+          <div class="gen-cost">Базовая цена: 12,000 ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">COLLID</span>
+            <span class="gen-eps">+1,400 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Фотонный Коллайдер</h4>
+          <p class="gen-desc">Сталкивает фотоны на околосветовой скорости, расщепляя виртуальные частицы.</p>
+          <div class="gen-cost">Базовая цена: 130,000 ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">ANTIM</span>
+            <span class="gen-eps">+8,500 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Сборщик Антиматерии</h4>
+          <p class="gen-desc">Улавливает позитроны из вакуума с коэффициентом аннигиляции 99.9%.</p>
+          <div class="gen-cost">Базовая цена: 1.40M ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">DYSON</span>
+            <span class="gen-eps">+55,000 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Кольцо Сферы Дайсона</h4>
+          <p class="gen-desc">Орбитальный рой мегазеркал напрямую аккумулирует фотонную радиацию звезды.</p>
+          <div class="gen-cost">Базовая цена: 20.00M ⚡</div>
+        </div>
+
+        <div class="gen-card">
+          <div class="gen-header">
+            <span class="gen-tag">SINGUL</span>
+            <span class="gen-eps">+420,000 ⚡/s</span>
+          </div>
+          <h4 class="gen-name">Двигатель Сингулярности</h4>
+          <p class="gen-desc">Искривляет ткань пространства-времени, выкачивая энергию из горизонта событий.</p>
+          <div class="gen-cost">Базовая цена: 350.00M ⚡</div>
+        </div>
+
+        <div class="gen-card special-prestige">
+          <div class="gen-header">
+            <span class="gen-tag gold">VOID</span>
+            <span class="gen-eps gold">+100% ГЛОБАЛЬНО</span>
+          </div>
+          <h4 class="gen-name">Тёмная Материя ✦</h4>
+          <p class="gen-desc">Престижный ресурс сингулярности. Умножает выработку всех генераторов навсегда.</p>
+          <div class="gen-cost gold">Добыча через коллапс</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION (CENTRAL HUB) -->
+    <section class="download-section" id="download">
+      <div class="download-container">
+        <div class="download-card">
+          <div class="card-corner top-l"></div>
+          <div class="card-corner top-r"></div>
+          <div class="card-corner btm-l"></div>
+          <div class="card-corner btm-r"></div>
+
+          <div class="download-header-badge">
+            <span class="pulse-green"></span> ПРЯМАЯ ЗАГРУЗКА БЕЗ СТОРОННИХ ЛАУНЧЕРОВ
+          </div>
+
+          <h2 class="download-title">СКАЧАТЬ CYBER CORE: QUANTUM OVERDRIVE</h2>
+          <p class="download-subtitle">
+            Полная портативная версия игры для Windows. Один автономный исполняемый файл.
+          </p>
+
+          <div class="download-main-btn-wrapper">
+            <a href="CyberCoreClicker.exe" download="CyberCoreClicker.exe" class="cyber-btn cyber-btn-xl cyber-btn-neon download-action-btn">
+              <span class="btn-icon">⚡</span>
+              <span class="btn-text-block">
+                <span class="btn-main-text">СКАЧАТЬ CYBERCORECLICKER.EXE</span>
+                <span class="btn-sub-text">Размер: 14.15 MB • Сборка: v1.0.4 Portable • Для Windows 10/11</span>
+              </span>
+              <span class="corner-cut"></span>
+            </a>
+          </div>
+
+          <!-- File Verification Panel -->
+          <div class="checksum-box">
+            <div class="checksum-header">
+              <span class="checksum-title">КОНТРОЛЬНАЯ СУММА ФАЙЛА (SHA-256):</span>
+              <button class="copy-hash-btn" id="btnCopyHash" title="Скопировать хэш">Копировать SHA-256</button>
+            </div>
+            <code class="checksum-code" id="sha256Text">A18497169266AF7CB5C1A2560D8052F3047C7EA84A87B5DD5AF13BE92C229F75</code>
+          </div>
+
+          <!-- 3-Step Quick Launch -->
+          <div class="steps-row">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <div class="step-title">СКАЧАЙТЕ EXE</div>
+              <div class="step-desc">Нажмите кнопку выше и сохраните файл `CyberCoreClicker.exe` в любую удобную папку.</div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <div class="step-title">ЗАПУСТИТЕ ДВОЙНЫМ КЛИКОМ</div>
+              <div class="step-desc">Игра запустится моментально. Сохранения автоматически пишутся рядом в JSON.</div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <div class="step-title">РАЗГОНЯЙТЕ ЯДРО</div>
+              <div class="step-desc">Кликайте, ловите аномалии, привязывайте карты и покоряйте горизонт сингулярности!</div>
+            </div>
+          </div>
+
+          <!-- Windows SmartScreen Note -->
+          <div class="smartscreen-note">
+            <div class="note-icon">💡</div>
+            <div class="note-text">
+              <strong>Совет при первом запуске на Windows:</strong>
+              Поскольку игра собрана независимым инди-разработчиком и не имеет платного корпоративного сертификата Microsoft,
+              фильтр <em>Windows SmartScreen</em> может показать стандартное синее предупреждение «Защитник Windows предотвратил запуск».
+              Это стандартно для инди-проектов: нажмите <u>«Подробнее»</u> ➔ <u>«Выполнить в любом случае»</u>.
+            </div>
+          </div>
+
+          <!-- System Requirements Table -->
+          <div class="sys-req-table">
+            <div class="req-title">СИСТЕМНЫЕ ТРЕБОВАНИЯ</div>
+            <div class="req-grid">
+              <div class="req-row">
+                <span class="req-param">Операционная система:</span>
+                <span class="req-val">Windows 10 / Windows 11 (64-bit)</span>
+              </div>
+              <div class="req-row">
+                <span class="req-param">Процессор (CPU):</span>
+                <span class="req-val">Любой двухъядерный от 1.8 GHz</span>
+              </div>
+              <div class="req-row">
+                <span class="req-param">Память (RAM):</span>
+                <span class="req-val">512 MB или выше</span>
+              </div>
+              <div class="req-row">
+                <span class="req-param">Видеокарта:</span>
+                <span class="req-val">Встроенная или дискретная с Direct3D / OpenGL</span>
+              </div>
+              <div class="req-row">
+                <span class="req-param">Место на диске:</span>
+                <span class="req-val">25 MB (Портативно, не засоряет реестр)</span>
+              </div>
+              <div class="req-row">
+                <span class="req-param">Зависимости:</span>
+                <span class="req-val">0 (Python, Pygame и библиотеки уже упакованы внутри)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="section-header">
+        <div class="section-tag">// ВОПРОСЫ И ОТВЕТЫ</div>
+        <h2 class="section-title">ЧАСТЫЕ ВОПРОСЫ</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4 class="faq-q">❓ Где хранятся мои сохранения?</h4>
+          <p class="faq-a">
+            Игра создаёт файл <code>cyber_core_save.json</code> прямо в той папке, где находится `CyberCoreClicker.exe`.
+            Вы можете легко скопировать этот файл на флешку или в облако, чтобы перенести свой прогресс на другой компьютер.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-q">❓ Реально ли здесь тратить настоящие рубли или доллары?</h4>
+          <p class="faq-a">
+            <strong>Категорически нет!</strong> Игра 100% бесплатна и не имеет никаких сетевых платежных шлюзов.
+            Весь донат-магазин — это игровая киберпанк-сатира: деньги для покупок добываются взломом виртуальных карт мегакорпораций.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-q">❓ Считается ли выработка энергии, пока игра выключена?</h4>
+          <p class="faq-a">
+            Да! Движок рассчитывает временную дельту с момента последнего выхода и начисляет вам весь пассивный заработок при следующем включении.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4 class="faq-q">❓ Почему игра весит всего 14 мегабайт?</h4>
+          <p class="faq-a">
+            Благодаря процедурному звуковому движку в игре нет тяжёлых звуковых файлов. Все звуки и интерфейс генерируются нативным кодом.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CYBER FOOTER -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-col-brand">
+        <div class="brand-logo footer-logo">
+          <img src="icon.png" alt="CyberCore Logo" class="brand-icon">
+          <div class="brand-text">
+            <span class="brand-title">CYBER CORE</span>
+            <span class="brand-sub">QUANTUM OVERDRIVE</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Футуристический кликер нового поколения. Без нейрослопа, без скрытого мусора, чистый игровой драйв.
+        </p>
+        <div class="footer-status-pill">
+          <span class="status-indicator-live"></span>
+          <span>CORE ENGINE: VERIFIED 100%</span>
+        </div>
+      </div>
+
+      <div class="footer-col-nav">
+        <div class="footer-nav-title">БЫСТРЫЙ ДОСТУП</div>
+        <ul class="footer-links-list">
+          <li><a href="#about">Особенности игры</a></li>
+          <li><a href="#demo">Интерактивный тест ядра</a></li>
+          <li><a href="#terminal">База карт и читов</a></li>
+          <li><a href="#generators">Древо генераторов</a></li>
+          <li><a href="CyberCoreClicker.exe" download>Скачать EXE (14.8 MB)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-files">
+        <div class="footer-nav-title">СТРУКТУРА ПРОЕКТА</div>
+        <div class="file-manifest">
+          <div class="manifest-item"><span>⚡ CyberCoreClicker.exe</span> <span>14.15 MB</span></div>
+          <div class="manifest-item"><span>💾 cyber_core_save.json</span> <span>Local Save</span></div>
+          <div class="manifest-item"><span>📜 README.md</span> <span>Documentation</span></div>
+          <div class="manifest-item"><span>🎨 icon.ico / icon.png</span> <span>HUD Assets</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <span>© 2026 CYBER CORE: QUANTUM OVERDRIVE • INDIE CYBERPUNK EXPERIENCE</span>
+        <span class="footer-back-to-top"><a href="#hero">ВВЕРХ ⯅</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
