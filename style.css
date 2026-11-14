@@ -969,6 +969,248 @@ kbd {
   border-bottom: 1px solid var(--border-dim);
 }
 
+/* Admin Security Gate (Classified Cards) */
+.admin-gate-panel {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.admin-gate-card {
+  background: rgba(13, 20, 36, 0.85);
+  border: 1px solid var(--border-bright);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 243, 255, 0.08);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.admin-gate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff007f 0%, #ffb700 50%, #00f3ff 100%);
+}
+
+.gate-status-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.gate-lock-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 0, 127, 0.12);
+  border: 1px solid var(--magenta);
+  border-radius: 8px;
+  box-shadow: 0 0 16px var(--magenta-glow);
+}
+
+.gate-title-block {
+  flex: 1;
+}
+
+.gate-classified-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--magenta);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.gate-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.gate-badge-encrypted {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  background: rgba(255, 183, 0, 0.12);
+  border: 1px solid rgba(255, 183, 0, 0.4);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.gate-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.admin-key-form {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.admin-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(6, 9, 17, 0.9);
+  border: 1px solid var(--border-bright);
+  border-radius: 6px;
+  padding: 0 16px;
+  transition: all 0.2s ease;
+}
+
+.admin-input-wrapper:focus-within {
+  border-color: var(--cyan);
+  box-shadow: 0 0 16px var(--cyan-glow);
+}
+
+.admin-input-prefix {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cyan);
+  user-select: none;
+  margin-right: 10px;
+}
+
+.admin-key-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 12px 0;
+  text-transform: uppercase;
+}
+
+.admin-key-input::placeholder {
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+.admin-key-status {
+  margin-top: 14px;
+  min-height: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  transition: opacity 0.3s ease;
+}
+
+.admin-key-status .error {
+  color: #ff3366;
+  text-shadow: 0 0 8px rgba(255, 51, 102, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-key-status .success {
+  color: var(--green);
+  text-shadow: 0 0 8px var(--green-glow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gate-footer-hint {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes cyberShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.cyber-shake {
+  animation: cyberShake 0.4s ease;
+  border-color: #ff3366 !important;
+}
+
+/* Unlocked cards view */
+.terminal-card-selector-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.unlocked-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.unlocked-status-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-indicator-green {
+  color: var(--green);
+  text-shadow: 0 0 8px var(--green-glow);
+}
+
+.unlocked-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1px;
+}
+
+.cyber-btn-mini {
+  background: rgba(255, 0, 127, 0.15);
+  border: 1px solid rgba(255, 0, 127, 0.4);
+  color: #ff508c;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cyber-btn-mini:hover {
+  background: rgba(255, 0, 127, 0.3);
+  border-color: #ff007f;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
 .terminal-container {
   max-width: 1200px;
   margin: 0 auto;
